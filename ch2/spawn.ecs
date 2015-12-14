@@ -1,0 +1,5 @@
+spawn_link fn -> raise "oops" end
+
+receive do
+  :hello -> "let's wait untel the process fails"
+end

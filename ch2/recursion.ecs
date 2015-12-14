@@ -1,0 +1,9 @@
+defmodule Recursion do
+  def a do
+    b
+  end
+
+  def b do
+    a
+  end
+end
