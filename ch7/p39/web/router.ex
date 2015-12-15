@@ -19,6 +19,9 @@ defmodule P39.Router do
     get "/", PageController, :index
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
+    get "/printout/:messenger", HelloController, :printout
+
+    resources "/employees", EmployeeController
   end
 
   # Other scopes may use custom stacks.

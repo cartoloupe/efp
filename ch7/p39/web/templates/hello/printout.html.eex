@@ -1,0 +1,27 @@
+<h2>A printout</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Position</th>
+      <th>Separation</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for employee <- @employees do %>
+    <tr>
+      <td><%= employee.first_name %></td>
+      <td><%= employee.last_name %></td>
+      <td><%= employee.position %></td>
+      <td><%= employee.separation %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "Back to employees", to: employee_path(@conn, :index) %>
+
